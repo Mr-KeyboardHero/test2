@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- 曲线 -->
+<!-- <svg height="400" width="450">
+  <path d="M 0 200 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+</svg> -->
+<!-- 带箭头的曲线 -->
+<div>
+<svg id="svg" width="200" height="100">
+    <defs>
+        <marker id="arrow" 
+                markerUnits="strokeWidth" 
+                markerWidth="12" 
+                markerHeight="12" 
+                viewBox="0 0 12 12" 
+                refX="6" 
+                refY="6" 
+                orient="auto">
+                <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill: #000000;" />
+        </marker>
+        </defs>
+    <desc>三次贝塞尔曲线</desc><defs></defs>
+    <path d="M20 20 C90 40, 130 40, 180 20" stroke="#000000"  style="stroke-width: 2px;stroke-dasharray:6;" 
+    marker-end="url(#arrow)" fill='none'></path>
+</svg>
+</div>
+<div>
+
+</body>
+</html>

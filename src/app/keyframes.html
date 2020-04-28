@@ -1,0 +1,33 @@
+<!DOCTYPE html>   
+<html>   
+<head>   
+<meta charset=" utf-8">   
+<meta name="author" content="http://www.softwhy.com/" />   
+<title>动画</title>  
+<style type="text/css">  
+div{ 
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    background: #f00;
+    position: relative;	
+     
+  animation:shake 5s infinite alternate; 
+  -webkit-animation:theanimation 5s infinite alternate ; 
+  -moz-animation:theanimation 5s infinite alternate ; 
+  -o-animation:theanimation 5s infinite alternate ; 
+  -ms-animation:theanimation 5s infinite alternate ; 
+} 
+@keyframes theanimation{ 
+
+  0% { transform: scale(1);left:0px; top:0px;}
+  25% { transform: scale(1);-webkit-transform:translateX(-7px) rotate(-7deg);left:0px; top:200px;}
+  75% { transform: scale(1);-webkit-transform:translateX(5px) rotate(6deg);;left:400px; top:200px;}
+  100% {transform: scale(1.5);left:0px; top:0px;}
+} 
+</style> 
+</head> 
+<body> 
+<div></div> 
+</body> 
+</html>

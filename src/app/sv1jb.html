@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @import './sv1jb.scss';
+</style>
+<body>
+<!-- 曲线 -->
+<svg height="400" width="450">
+  <path d="M 0 200 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+</svg>
+<!-- 带箭头的曲线 -->
+<div>
+    <svg class="curved-line" viewBox="31 9 226 120">
+
+        <defs>
+          <linearGradient x1="50%" y1="108.24102%" x2="50%" y2="29.9104628%" id="curved-line-gradient">
+            <stop offset="0%"></stop>
+            <stop offset="100%"></stop>
+          </linearGradient>
+    
+          <path d="M34.7597656,24.6621094 C34.7597656,24.6621094 77.5078125,36.5332031 85.4667969,81.3476562 C93.4257812,126.162109 113.244141,136.978516 125.021484,61.3085937 C136.798828,-14.3613281 177.576172,3.91601562 181.253906,53.3027344 C184.931641,102.689453 198.804688,86.3828125 203.578125,66.0292969 C208.351562,45.6757812 219.548828,33.1386719 252.980469,33.1386719"
+          id="curved-line"></path>
+    
+          <filter id="dropshadow" height="130%">
+            <!-- blur amount -->
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+            <!-- offset -->
+            <feOffset dx="0" dy="13" result="offsetblur" />
+            <!-- opacity -->
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.1" />
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+    
+        </defs>
+    
+        <g stroke="none" fill="none">
+          <use stroke="url(#curved-line-gradient)" xlink:href="#curved-line"></use>
+        </g>
+      </svg>
+</div>
+<div>
+</body>
+</html>
